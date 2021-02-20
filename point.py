@@ -1,4 +1,4 @@
-class MapNode():
+class Point():
     def __init__(self, latitude, longitude):
         self.lat = float(latitude)
         self.long = float(longitude)
