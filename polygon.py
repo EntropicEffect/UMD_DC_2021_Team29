@@ -14,8 +14,10 @@ class Polygon:
         s += str(point) + '\n'
       return s
 
+    # Threshold is 10^-5 because coordinates are within 1 meter of accuracy.
+    # 1 meter = 10^-5.
     @staticmethod
-    def is_within_threshold(x,y, threshold=10**-4):
+    def is_within_threshold(x,y, threshold=10**-5):
         return abs(x - y) < threshold
 
     def intersect_edge(self, e, p):
