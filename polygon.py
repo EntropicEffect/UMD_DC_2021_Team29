@@ -8,17 +8,23 @@ class Polygon:
             self.edges.append(Edge(points[i], points[i + 1]))
         self.edges.append(Edge(points[-1], points[0]))
 
+    def __repr__(self):
+      s = ''
+      for point in self.points:
+        s += str(point) + '\n'
+      return s
+
     @staticmethod
     def is_within_threshold(x,y, threshold=10**-4):
         return abs(x - y) < threshold
 
     def intersect_edge(self, e, p):
-        x1 = e.p0.x
-        y1 = e.p0.y
-        x2 = e.p1.x
-        y2 = e.p1.y
-        xp = p.x
-        yp = p.y
+        x1 = e.p0.lat
+        y1 = e.p0.long
+        x2 = e.p1.lat
+        y2 = e.p1.long
+        xp = p.lat
+        yp = p.long
 
         # Case 1: point is to the left of the edge
         if x1 < xp and x2 < xp:
@@ -64,3 +70,10 @@ class Polygon:
             else:
                 k += m
         return k % 2
+
+    def print_point_inside(self, point):
+        t = self.point_inside(point)
+        res = 'outside'
+        if t == 2: res = 'on'
+        if t == 1: res = 'inside'
+        print(f'Result: P is {res} PL')
