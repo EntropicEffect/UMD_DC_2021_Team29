@@ -63,6 +63,9 @@ class Polygon:
         else:
             return 0
 
+    # outside polygon -> return 0
+    # on polygon -> return 2
+    # inside polygon -> return 1
     def point_inside(self, point):
         k = 0
         for edge in self.edges:
