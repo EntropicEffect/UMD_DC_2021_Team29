@@ -8,7 +8,8 @@ Rides:
 - Calculated how many rides originated on campus and terminated off campus and the average distance
 - Calculated the same rides that originated off campus and terminated on campus
 - The data for each is stored in its respective csv file. 
-  - *Note:* data only contains 'DISTANCE', 'START LAT', 'START LONG', 'END LAT', 'END LONG' right now, can update this later if needed!
+  - **Note:** data only contains 'DISTANCE', 'START LAT', 'START LONG', 'END LAT', 'END LONG' right now, can update this later if needed!
+  - **Note:** CSV files are stored using git LFS (Large File Storage). This is done automatically whenever you push a .csv file to the git repo.
 
 Visualization:
   - Can load up College Park map from GIS provider and draw the polygon bounding box for UMD. 
