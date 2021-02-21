@@ -9,3 +9,6 @@ Rides:
 - Calculated the same rides that originated off campus and terminated on campus
 - The data for each is stored in its respective csv file.
 
+Visualization:
+  - Can load up College Park map from GIS provider and draw the polygon bounding box for UMD. 
+  - Calculated heatmap intensity for the number of times a particular location was pinged. Cannot yet overlay this on GIS provided map
