@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
 import numpy as np
@@ -51,6 +52,9 @@ df22019 = df2[df2['CREATED'].str.startswith('2019')]
 df22020 = df2[df2['CREATED'].str.startswith('2020')]
 df32019 = df3[df3['CREATED'].str.startswith('2019')]
 df32020 = df3[df3['CREATED'].str.startswith('2020')]
+
+df2019 = df[df['CREATED'].str.startswith('2019')]
+df2020 = df[df['CREATED'].str.startswith('2020')]
 
 ## Creates csv files from dataframes
 
