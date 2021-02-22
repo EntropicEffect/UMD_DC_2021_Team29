@@ -39,6 +39,8 @@ boundary = get_cpk_boundary()
 df['TRIP_CLASS'] = df.apply (lambda row: get_trip_class(boundary, row), axis=1)
 df.dropna(subset=['TRIP_CLASS'], inplace=True)
 
+# df.to_csv('RidesWithTripClass.csv')
+
 df1 = df[df['TRIP_CLASS'] == 'A']
 df2 = df[df['TRIP_CLASS'] == 'B']
 df3 = df[df['TRIP_CLASS'] == 'C']
