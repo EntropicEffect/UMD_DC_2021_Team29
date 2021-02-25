@@ -13,10 +13,10 @@ with open(filename) as file:
 
 poly = Polygon(points)
 
-with open('metro_boundary.pickle', 'wb') as handle:
+with open('boundaries/metro/metro_boundary.pickle', 'wb') as handle:
     pickle.dump(poly, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-with open('metro_boundary.pickle', 'rb') as handle:
+with open('boundaries/metro/metro_boundary.pickle', 'rb') as handle:
     metro_boundary = pickle.load(handle)
     
 print(metro_boundary)
