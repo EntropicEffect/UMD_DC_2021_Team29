@@ -17,4 +17,4 @@ Common repository for all analysis done on the 2021 UMD data challenge
 
 ## Visualization:
   - Can load up College Park map from GIS provider and draw the polygon bounding box for UMD. 
-  - Calculated heatmap intensity for the number of times a particular location was pinged. Cannot yet overlay this on GIS provided map
+  - Calculated point density for the number of times a particular location was pinged and visualized it using a heatmap.
